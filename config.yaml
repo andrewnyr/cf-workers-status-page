@@ -53,3 +53,11 @@ monitors:
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
     followRedirect: false # should fetch follow redirects, default=false
+    
+  - id: njit # unique identifier
+    name: andrewnet njit website
+    description: 'andrewnet njit website running at njit' # default=empty
+    url: 'https://web.njit.edu/~aja9/' # URL to fetch
+    method: GET # default=GET
+    expectStatus: 200 # operational status, default=200
+    followRedirect: false # should fetch follow redirects, default=false
