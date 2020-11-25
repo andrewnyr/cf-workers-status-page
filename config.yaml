@@ -5,8 +5,8 @@ settings:
   daysInHistogram: 90 # number of days you want to display in histogram
   collectResponseTimes: false # experimental feature, enable only for <5 monitors or on paid plans
 
-  allmonitorsOperational: 'All Systems Operational'
-  notAllmonitorsOperational: 'Not All Systems Operational'
+  allmonitorsOperational: 'we chillin'
+  notAllmonitorsOperational: 'some issues detected at andrewnet'
   monitorLabelOperational: 'Operational'
   monitorLabelNotOperational: 'Not Operational'
   monitorLabelNoData: 'No data'
@@ -17,7 +17,7 @@ settings:
 monitors:
   - id: andrewnet # unique identifier
     name: andrewnet.net
-    description: 'main andrewnet website' # default=empty
+    description: 'main andrewnet website running on aws' # default=empty
     url: 'https://www.andrewnet.net/' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
@@ -25,13 +25,14 @@ monitors:
 
   - id: adfs
     name: andrewnet authentication 
-    description: 'main auth system for andrewnet running on adfs'
+    description: 'main auth system for andrewnet running on adfs at 186'
     url: 'https://adfs.andrewnet.net/adfs/ls/idpinitiatedsignon'
     method: GET
     expectStatus: 200
 
   - id: nextcloud
     name: nextcloud
+    description: 'main file access andrewnet located at 186'
     url: 'https://nxtc.andrewnet.net/'
     method: GET
     expectStatus: 200
@@ -41,6 +42,14 @@ monitors:
     name: cloud hub
     description: 'the andrewnet cloud hub running on netlify' # default=empty
     url: 'https://hub.andrewnet.net/' # URL to fetch
+    method: GET # default=GET
+    expectStatus: 200 # operational status, default=200
+    followRedirect: false # should fetch follow redirects, default=false
+
+  - id: cdn # unique identifier
+    name: andrewnet cloud cdn
+    description: 'andrewnet main cloud content delivery network running on github' # default=empty
+    url: 'https://cloud.cdn.andrewnet.net/' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
     followRedirect: false # should fetch follow redirects, default=false
