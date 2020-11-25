@@ -1,5 +1,5 @@
 settings:
-  title: 'Status Page'
+  title: 'andrewnet status'
   url: 'https://status.andrewnet.net' # used for Slack messages
   logo: logo-192x192.png # image in ./public/ folder
   daysInHistogram: 90 # number of days you want to display in histogram
@@ -23,7 +23,7 @@ monitors:
     expectStatus: 200 # operational status, default=200
     followRedirect: false # should fetch follow redirects, default=false
 
-  - id: www-cloudflare-com
+  - id: adfs
     name: andrewnet authentication 
     description: 'main auth system for andrewnet running on adfs'
     url: 'https://adfs.andrewnet.net/adfs/ls/idpinitiatedsignon'
@@ -36,3 +36,11 @@ monitors:
     method: GET
     expectStatus: 200
     followRedirect: true # should fetch follow redirects, default=false
+    
+  - id: cloudhub # unique identifier
+    name: cloud hub
+    description: 'the andrewnet cloud hub running on netlify' # default=empty
+    url: 'https://hub.andrewnet.net/' # URL to fetch
+    method: GET # default=GET
+    expectStatus: 200 # operational status, default=200
+    followRedirect: false # should fetch follow redirects, default=false
