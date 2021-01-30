@@ -17,7 +17,7 @@ settings:
 monitors:
   - id: andrewnet # unique identifier
     name: andrewnet.net
-    description: 'main andrewnet website running on aws' # default=empty
+    description: 'main andrewnet website running on pages' # default=empty
     url: 'https://www.andrewnet.net/' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
@@ -40,7 +40,7 @@ monitors:
     
   - id: cloudhub # unique identifier
     name: cloud hub
-    description: 'the andrewnet cloud hub running on netlify' # default=empty
+    description: 'the andrewnet cloud hub running on pages' # default=empty
     url: 'https://hub.andrewnet.net/' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
@@ -48,7 +48,7 @@ monitors:
 
   - id: cdn # unique identifier
     name: andrewnet cloud cdn
-    description: 'andrewnet main cloud content delivery network running on github' # default=empty
+    description: 'andrewnet main cloud content delivery network running on digitalocean' # default=empty
     url: 'https://cloud.cdn.andrewnet.net/' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
