@@ -48,10 +48,10 @@ monitors:
 
   - id: cdn # unique identifier
     name: andrewnet cloud cdn
-    description: 'andrewnet main cloud content delivery network running on digitalocean' # default=empty
+    description: 'andrewnet main cloud content delivery network running on render' # default=empty
     url: 'https://cloud.cdn.andrewnet.net/' # URL to fetch
     method: GET # default=GET
-    expectStatus: 200 # operational status, default=200
+    expectStatus: 304 # operational status, default=200
     followRedirect: false # should fetch follow redirects, default=false
     
   - id: njit # unique identifier
