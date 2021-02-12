@@ -1,3 +1,4 @@
+#yaml
 settings:
   title: 'andrewnet status'
   url: 'https://status.andrewnet.net' # used for Slack messages
