@@ -49,7 +49,7 @@ monitors:
 
   - id: cdn # unique identifier
     name: andrewnet cloud cdn
-    description: 'andrewnet main cloud content delivery network running on render' # default=empty
+    description: 'andrewnet main cloud content delivery network running on wasabi' # default=empty
     url: 'https://cdn.andrewnet.net/images/assets/andrewnet-vector.svg' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
