@@ -23,21 +23,6 @@ monitors:
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
     followRedirect: false # should fetch follow redirects, default=false
-
-  - id: adfs
-    name: andrewnet authentication 
-    description: 'main auth system for andrewnet running on adfs at 186'
-    url: 'https://adfs.andrewnet.net/adfs/ls/idpinitiatedsignon'
-    method: GET
-    expectStatus: 200
-
-  - id: nextcloud
-    name: nextcloud
-    description: 'main file access andrewnet located at 186'
-    url: 'https://nxtc.andrewnet.net/'
-    method: GET
-    expectStatus: 200
-    followRedirect: true # should fetch follow redirects, default=false
     
   - id: cloudhub # unique identifier
     name: cloud hub
@@ -51,6 +36,14 @@ monitors:
     name: andrewnet cloud cdn
     description: 'andrewnet main cloud content delivery network running on wasabi' # default=empty
     url: 'https://cdn.andrewnet.net/images/assets/andrewnet-vector.svg' # URL to fetch
+    method: GET # default=GET
+    expectStatus: 200 # operational status, default=200
+    followRedirect: true # should fetch follow redirects, default=false
+    
+  - id: status # unique identifier
+    name: statuspage
+    description: 'brought to you by Statusflare' # default=empty
+    url: 'https://status.andrewnet.net' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
     followRedirect: true # should fetch follow redirects, default=false
